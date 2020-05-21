@@ -44,7 +44,7 @@ namespace IBM.SocketIO.Impl
         {
             var uri = new Uri(baseUrl);
             var host = uri.GetLeftPart(UriPartial.Authority);
-            this.baseHttpUrl = "http" + host.TrimStart('w', 's') + "/socket.io/?EIO=3";
+            this.baseHttpUrl = host + "/socket.io/?EIO=3";
             this.baseWsUrl = uri.GetLeftPart(UriPartial.Authority) + "/socket.io/?EIO=3";
             this.roomPath = uri.AbsolutePath;
 
